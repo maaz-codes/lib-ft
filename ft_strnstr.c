@@ -1,9 +1,9 @@
 #include <string.h>
 #include <stdio.h>
 
-static int calculate_len(const char *str)
+static size_t calculate_len(const char *str)
 {
-	int len;
+	size_t len;
 
 	len = 0;
 	while (str[len] != '\0')
@@ -11,9 +11,9 @@ static int calculate_len(const char *str)
 	return (len);
 }
 
-static int check_needle(const char *haystack, const char *needle, int index)
+static size_t check_needle(const char *haystack, const char *needle, int index)
 {
-	int j;
+	size_t j;
 
 	j = 0;
 	while (needle[j] != '\0')
@@ -29,10 +29,10 @@ static int check_needle(const char *haystack, const char *needle, int index)
 	return (j);
 }
 
-char *ft_strnstr(const char *haystack, const char *needle, unsigned long len)
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    int	i;
-	int needle_len;
+    size_t i;
+	size_t needle_len;
 
     i = 0;
 	needle_len = calculate_len(needle);
@@ -53,12 +53,12 @@ char *ft_strnstr(const char *haystack, const char *needle, unsigned long len)
 
 // i = 11; len = 16; needle_len = 5; if (16 >= 11 + 5)
 
-int main(void)
-{
-    char *haystack = "Hello worl world, what's up?";
-    char *needle = "world";
-    char *ptr = strnstr(haystack, needle, 16);
-	char *ptr2 = ft_strnstr(haystack, needle, 16);
-    printf("result original = %s\n", ptr);
-	printf("result FT = %s\n", ptr2);
-}
+// int main(void)
+// {
+//     char *haystack = "Hello worl world, what's up?";
+//     char *needle = "world";
+//     char *ptr = strnstr(haystack, needle, 16);
+// 	char *ptr2 = ft_strnstr(haystack, needle, 16);
+//     printf("result original = %s\n", ptr);
+// 	printf("result FT = %s\n", ptr2);
+// }

@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 
-int ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
     unsigned int i = 0;
     while (s1[i] != '\0' && s1[i] == s2[i] && i < n)
@@ -15,8 +15,8 @@ int ft_strncmp(const char *s1, const char *s2, unsigned int n)
     return (0);
 }
 
-int main(void)
-{
-    printf("mine = %d \n", ft_strncmp("1230000", "12345", 4));
-    printf("original = %d\n", strncmp("1230000", "12345", 4));
-}
+// int main(void)
+// {
+//     printf("FT = %d \n", ft_strncmp("1230000", "12345", 4));
+//     printf("original = %d\n", strncmp("1230000", "12345", 4));
+// }

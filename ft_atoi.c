@@ -26,8 +26,8 @@ int ft_atoi(char *str)
     return (number * sign);
 }
 
-int main(void)
-{
-    printf("Ft atoi     = %d \n", ft_atoi("-1234567890"));
-    printf("Original    = %d \n", atoi("-1234567890"));
-}
+// int main(void)
+// {
+//     printf("Ft atoi     = %d \n", ft_atoi("-1234567890"));
+//     printf("Original    = %d \n", atoi("-1234567890"));
+// }

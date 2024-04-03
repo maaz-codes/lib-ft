@@ -1,23 +1,35 @@
 #include <string.h>
 #include <stdio.h>
+// #include "libft.h"
 
-char *ft_strrchr(char *str, char c)
+static size_t ft_strlen(const char *s)
 {
-    int i = 0;
-    int ctr = -1;
-    while (str[i] != '\0')
+    size_t len;
+
+    len = 0;
+    while (s[len])
+        len++;
+    return (len);
+}
+
+char *ft_strrchr(const char *s, int c)
+{
+    int i;
+    size_t len;
+   
+    i = 0;
+    len = ft_strlen(s);
+    while (i <= len)
     {
-        if (str[i] == c)
-            ctr = i;
+        if (s[i] == c)
+            return ((char *) s + i);
         i++;
     }
-    if (ctr != -1)
-        return (str + ctr);
-    return (0);
+    return (NULL);
 }
 
-int main(void)
-{
-    printf("mine = %s \n", ft_strrchr("abfcdefg", 'g'));
-    printf("original = %s\n", strrchr("abfcdefg", 'g'));
-}
+// int main(void)
+// {
+//     printf("FT = %s \n", ft_strrchr("abcdefg", '\0'));
+//     printf("original = %s\n", strrchr("abcdefg", '\0'));
+// }

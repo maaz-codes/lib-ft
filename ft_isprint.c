@@ -8,8 +8,8 @@ int ft_isprint(int c)
     return (0);
 }
 
-int main(void)
-{
-	printf("%d \n", ft_isprint('p'));
-	printf("%d \n", isprint('p'));
-}
+// int main(void)
+// {
+// 	printf("%d \n", ft_isprint('p'));
+// 	printf("%d \n", isprint('p'));
+// }

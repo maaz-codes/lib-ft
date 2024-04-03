@@ -8,9 +8,9 @@ int ft_isascii(int c)
     return (0);
 }
 
-int main(void)
-{
-    printf("anwer = %d \n", ft_isascii('3'));
-    printf("anwer = %d \n", isascii('3'));
+// int main(void)
+// {
+//     printf("anwer = %d \n", ft_isascii('3'));
+//     printf("anwer = %d \n", isascii('3'));
 
-}
+// }

@@ -1,21 +1,21 @@
 #include <string.h>
 #include <stdio.h>
 
-char *ft_strchr(char *str, char c)
+char *ft_strchr(const char *s, int c)
 {
     int i = 0;
-    while (str[i] != '\0')
+    while (s[i] != '\0')
     {
-        if (str[i] == c)
-            return (str + i);
+        if (s[i] == c)
+            return ((char *)s + i);
         i++;
     }
     return (0);
 }
 
-int main(void)
-{
-    printf("mine = %s \n", ft_strchr("abcdefg", 'z'));
-    printf("original = %s\n", strchr("abcdefg", 'z'));
+// int main(void)
+// {
+//     printf("FT = %s \n", ft_strchr("abcdefg", 'z'));
+//     printf("original = %s\n", strchr("abcdefg", 'z'));
 
-}
+// }

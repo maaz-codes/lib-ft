@@ -8,8 +8,8 @@ int ft_isalpha(int c)
 	return (0);
 }
 
-int main(void)
-{
-	printf("%d \n", ft_isalpha('a'));
-	printf("%d \n", isalpha('a'));
-}
+// int main(void)
+// {
+// 	printf("%d \n", ft_isalpha('a'));
+// 	printf("%d \n", isalpha('a'));
+// }

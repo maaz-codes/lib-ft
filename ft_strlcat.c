@@ -1,17 +1,20 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-static unsigned int ft_strlen(char *str)
+static size_t ft_strlen(const char *str)
 {
-    unsigned int len = 0;
+    size_t len = 0;
     while (str[len] != '\0')
         len++;
     return(len);
 }
 
-unsigned long ft_strlcat(char *restrict dst, const char * restrict src, unsigned int dstsize)
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    unsigned long len = ft_strlen(dst);
+    size_t len = dstsize;
+    size_t len2 = ft_strlen(src);
+
     unsigned int i = 0;
     while (i < len)
     {
@@ -20,14 +23,14 @@ unsigned long ft_strlcat(char *restrict dst, const char * restrict src, unsigned
     }
     dst[i] = '\0';
     len = ft_strlen(dst);
-    return (len);
+    return (len + len2);
 }
 
-int main(void)
-{
-    char src[10] = "Hello";
-    char dst[10] = "Maaz";
+// int main(void)
+// {
+//     char src[10] = "Hello";
+//     char dst[10] = "Maaz";
 
-    // printf("FT =        %s || return = %lu \n", dst, ft_strlcat(dst, src, sizeof(dst)));
-    printf("Original =  %s || return = %lu \n", dst, strlcat(dst, src, 5));
-}
+//     printf("FT =        %s || return = %lu \n", dst, ft_strlcat(dst, src, sizeof(dst)));
+//     printf("Original =  %s || return = %lu \n", dst, strlcat(dst, src, 5));
+// }
