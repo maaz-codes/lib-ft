@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
 static void ft_printlst(t_list *lst)
@@ -15,10 +15,16 @@ static void ft_printlst(t_list *lst)
     printf("\n");
 }
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-    new->next = *lst;
-    *lst = new;
+    t_list *node;
+
+    node = *lst;
+    if (node == NULL)
+        node = new;
+    while (node->next != NULL)
+        node = node->next;
+    node->next = new;
 }
 
 int main(void)
@@ -37,15 +43,14 @@ int main(void)
 
     // New Node 
     ptr = malloc(sizeof(t_list));
-    ptr->content = "Node 0";
+    ptr->content = "Node 3";
     ptr->next = NULL;
 
-    // printing before adding new node
+    printf("Before adding new node : ");
     ft_printlst(lst);
 
-    // Adding the node to front
-    ft_lstadd_front(&lst, ptr);
+    ft_lstadd_back(&lst, ptr);
 
-    // printing after adding new node
+    printf("After adding new node : ");
     ft_printlst(lst);
 }
