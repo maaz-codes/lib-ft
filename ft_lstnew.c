@@ -13,9 +13,9 @@ t_list *ft_lstnew(void *content)
     return (node);
 }
 
-int main(void)
-{
-    int data = 34;
-    t_list *node = ft_lstnew(&data);
-    printf("Node Data : %d", *(int *)node->content); // node->content = &data; *&data = 34;
-}
+// int main(void)
+// {
+//     int data = 34;
+//     t_list *node = ft_lstnew(&data);
+//     printf("Node Data : %d", *(int *)node->content); // node->content = &data; *&data = 34;
+// }

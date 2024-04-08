@@ -27,30 +27,30 @@ void ft_lstadd_back(t_list **lst, t_list *new)
     node->next = new;
 }
 
-int main(void)
-{
-    t_list *lst;
-    t_list *ptr;
+// int main(void)
+// {
+//     t_list *lst;
+//     t_list *ptr;
 
-    lst = malloc(sizeof(t_list));
-    lst->content = "Node 1";
-    lst->next = NULL;
+//     lst = malloc(sizeof(t_list));
+//     lst->content = "Node 1";
+//     lst->next = NULL;
 
-    ptr = malloc(sizeof(t_list));
-    lst->next = ptr;
-    ptr->content = "Node 2";
-    ptr->next = NULL;
+//     ptr = malloc(sizeof(t_list));
+//     lst->next = ptr;
+//     ptr->content = "Node 2";
+//     ptr->next = NULL;
 
-    // New Node 
-    ptr = malloc(sizeof(t_list));
-    ptr->content = "Node 3";
-    ptr->next = NULL;
+//     // New Node 
+//     ptr = malloc(sizeof(t_list));
+//     ptr->content = "Node 3";
+//     ptr->next = NULL;
 
-    printf("Before adding new node : ");
-    ft_printlst(lst);
+//     printf("Before adding new node : ");
+//     ft_printlst(lst);
 
-    ft_lstadd_back(&lst, ptr);
+//     ft_lstadd_back(&lst, ptr);
 
-    printf("After adding new node : ");
-    ft_printlst(lst);
-}
+//     printf("After adding new node : ");
+//     ft_printlst(lst);
+// }
