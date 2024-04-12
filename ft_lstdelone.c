@@ -3,14 +3,14 @@
 #include "libft.h"
 #include <string.h>
 
-static void del(void *content)
-{
-    if (content != NULL)
-    {
-        free(content);
-        content = NULL;
-    }
-}
+// static void del(void *content)
+// {
+//     if (content != NULL)
+//     {
+//         free(content);
+//         content = NULL;
+//     }
+// }
 
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
@@ -18,18 +18,18 @@ void ft_lstdelone(t_list *lst, void (*del)(void*))
     free(lst);
 }
 
-static void ft_printlst(t_list *lst)
-{
-    t_list *node;
+// static void ft_printlst(t_list *lst)
+// {
+//     t_list *node;
 
-    node = lst;
-    while (node != NULL)
-    {
-        printf("%s, \n", (char *)node->content);
-        node = node->next;
-    }
-    printf("\n");
-}
+//     node = lst;
+//     while (node != NULL)
+//     {
+//         printf("%s, \n", (char *)node->content);
+//         node = node->next;
+//     }
+//     printf("\n");
+// }
 
 // int main()
 // {

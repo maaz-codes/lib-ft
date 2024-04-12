@@ -1,20 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-static int ft_strlen(const char *str)
-{
-    long len = 0;
-    while (str[len] != '\0')
-        len++;
-    return (len);
-}
+#include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     char *ptr;
     unsigned int i;
 
-    ptr = (char *) malloc((sizeof(char) * ft_strlen(s)) + 1);
+    if (!s || !f)
+        return NULL;
+    ptr = (char *) malloc((sizeof(char) * (ft_strlen(s)) + 1));
     if (!ptr)
         return (NULL);
     i = 0;
@@ -23,6 +18,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         ptr[i] = f(i, s[i]);
         i++;
     }
+    ptr[i] = '\0';
     return (ptr);
 }
 

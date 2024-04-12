@@ -14,7 +14,7 @@ OBJS	= $(SRCS:.c=.o)
 
 OBJC	= $(BONUSC:.c=.o)
 
-CC		= CC
+CC		= cc
 
 FLAGS	= -Wall -Wextra -Werror
 
@@ -27,7 +27,7 @@ bonus: $(NAME) $(OBJC)
 	ar -r $(NAME) $(OBJC)
 
 %.o:%.c
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS)

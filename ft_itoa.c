@@ -8,10 +8,12 @@ static char *memory_alloc(char *num, int i)
 
     j = 0;
     ptr = (char *)malloc(sizeof(char) * (i + 1));
+    if (!ptr)
+        return NULL;
     i--;
     while (i >= 0)
         ptr[j++] = num[i--];
-
+    ptr[j] = '\0';
     return (ptr);
 }
 
@@ -19,7 +21,7 @@ char *ft_itoa(int n)
 {
     char *ptr;
     long temp;
-    char num[10];
+    char num[11];
     int i;
     
     temp = n;
@@ -43,5 +45,5 @@ char *ft_itoa(int n)
 
 // int main(void)
 // {
-//     printf("Result = %s\n", ft_itoa(123));
+//     printf("Result = %s\n", ft_itoa(-2147483648));
 // }

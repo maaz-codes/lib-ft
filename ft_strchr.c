@@ -1,13 +1,16 @@
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {
-    int i = 0;
-    while (s[i] != '\0')
+    unsigned int i;
+
+    i = 0;
+    while (i <= ft_strlen(s))
     {
         if (s[i] == c)
-            return ((char *)s + i);
+            return ((char *) s + i);
         i++;
     }
     return (0);
@@ -15,7 +18,7 @@ char *ft_strchr(const char *s, int c)
 
 // int main(void)
 // {
-//     printf("FT = %s \n", ft_strchr("abcdefg", 'z'));
-//     printf("original = %s\n", strchr("abcdefg", 'z'));
+//     printf("FT = %s \n", ft_strchr("abcdefg", 'g'));
+//     printf("original = %s\n", strchr("abcdefg", 'g'));
 
 // }

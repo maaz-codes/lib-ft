@@ -1,19 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "libft.h"
-
-static void ft_printlst(t_list *lst)
-{
-    t_list *node;
-
-    node = lst;
-    while (node != NULL)
-    {
-        printf("%s, ", (char *)node->content);
-        node = node->next;
-    }
-    printf("\n");
-}
 
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -21,7 +9,11 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 
     node = *lst;
     if (node == NULL)
+    {
+        if (!new)
+            return ;
         node = new;
+    }
     while (node->next != NULL)
         node = node->next;
     node->next = new;
@@ -30,27 +22,15 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 // int main(void)
 // {
 //     t_list *lst;
-//     t_list *ptr;
 
-//     lst = malloc(sizeof(t_list));
-//     lst->content = "Node 1";
-//     lst->next = NULL;
-
-//     ptr = malloc(sizeof(t_list));
-//     lst->next = ptr;
-//     ptr->content = "Node 2";
-//     ptr->next = NULL;
-
-//     // New Node 
-//     ptr = malloc(sizeof(t_list));
-//     ptr->content = "Node 3";
-//     ptr->next = NULL;
-
+//     lst = ft_lstnew(strdup("Node 1"));
+    
 //     printf("Before adding new node : ");
-//     ft_printlst(lst);
+//     ft_lstprint(lst);
 
-//     ft_lstadd_back(&lst, ptr);
+//     // ft_lstadd_back(&lst, ft_lstnew(strdup("Node 2")));
+//     ft_lstadd_back(&lst, ft_lstnew(NULL));
 
 //     printf("After adding new node : ");
-//     ft_printlst(lst);
+//     ft_lstprint(lst);
 // }

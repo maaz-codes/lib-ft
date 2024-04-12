@@ -56,4 +56,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
+// to remove
+void 	ft_lstprint(t_list *lst);
+
 #endif
