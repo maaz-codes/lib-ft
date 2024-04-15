@@ -3,10 +3,20 @@
 
 void *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned char *ptr_dst = dst;
-    const unsigned char *ptr_src = src;
-    while (n--)
-        *ptr_dst++ = *ptr_src++;
+    size_t i;
+    char *ptr1;
+    char const *ptr2;
+
+    if (!dst && !src)
+        return (NULL);
+    ptr1 = (char *)dst;
+    ptr2 = (char *)src;
+    i = 0;
+    while (i < n)
+    {
+        ptr1[i] = ptr2[i];
+        i++;
+    }
     return (dst);
 }
 
