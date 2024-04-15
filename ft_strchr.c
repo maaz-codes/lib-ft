@@ -18,7 +18,7 @@ char *ft_strchr(const char *s, int c)
 
 // int main(void)
 // {
-//     printf("FT = %s \n", ft_strchr("abcdefg", 'g'));
-//     printf("original = %s\n", strchr("abcdefg", 'g'));
+//     printf("FT = %s \n", ft_strchr("abcdefg", 'e'));
+//     printf("original = %s\n", strchr("abcdefg", 'e'));
 
 // }

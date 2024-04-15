@@ -1,33 +1,29 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-static size_t ft_strlen(const char *str)
-{
-    size_t len = 0;
-    while (str[len] != '\0')
-        len++;
-    return(len);
-}
+#include "libft.h"
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    char *ptr1 = dst;
-    const char *ptr2 = src;
-    size_t len = ft_strlen(src);
-    while (dstsize--)
+    size_t i;
+    
+    i = 0;
+    if (!dst || !src || !dstsize)
+        return (ft_strlen(src));
+    while ((i < dstsize - 1) && src[i])
     {
-        *ptr1++ = *ptr2++;
+        dst[i] = src[i];
+        i++;
     }
-    *ptr1 = '\0';
-    return (len);
+    dst[i] = '\0';
+    return (ft_strlen(src));
 }
 
 // int main(void)
 // {
 //     char src[6] = "Hello";
-//     char dst[6];
+//     char dst[3];
 
-//     printf("FT =        %s || return = %d \n", dst, ft_strlcpy(dst, src, sizeof(dst)));
-//     printf("Original =  %s || return = %d \n", dst, strlcpy(dst, src, sizeof(dst)));
+//     printf("Original =  %s || return = %lu \n", dst, strlcpy(dst, src, sizeof(dst)));
+//     printf("FT =        %s || return = %zu \n", dst, ft_strlcpy(dst, src, sizeof(dst)));
 // }

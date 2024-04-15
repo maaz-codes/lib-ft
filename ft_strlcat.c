@@ -1,36 +1,32 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-static size_t ft_strlen(const char *str)
-{
-    size_t len = 0;
-    while (str[len] != '\0')
-        len++;
-    return(len);
-}
+#include "libft.h"
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t len = dstsize;
-    size_t len2 = ft_strlen(src);
+    size_t i;
+    size_t len_dst;
+    size_t len_src;
 
-    unsigned int i = 0;
-    while (i < len)
+    i = 0;
+    len_dst = ft_strlen(dst);
+    len_src = ft_strlen(src);
+    if (!dstsize || len_dst > dstsize)
+        return (dstsize + len_src);
+    while (src[i] && (len_dst + i) < (dstsize - 1))
     {
-        dst[len + 1] = src[i];
+        dst[len_dst + i] = src[i];
         i++;
     }
-    dst[i] = '\0';
-    len = ft_strlen(dst);
-    return (len + len2);
+    dst[len_dst + i] = '\0';
+    return (len_src + len_dst);
 }
 
 // int main(void)
 // {
-//     char src[10] = "Hello";
-//     char dst[10] = "Maaz";
+//     char dest[10] = "a";
 
-//     printf("FT =        %s || return = %lu \n", dst, ft_strlcat(dst, src, sizeof(dst)));
-//     printf("Original =  %s || return = %lu \n", dst, strlcat(dst, src, 5));
+//     // printf("FT = %s || return = %lu \n", dest, ft_strlcat(dest, "lorem ipsum dolor sit amet", 0));
+//     printf("Original =  %s || return = %lu \n", dest, strlcat(dest, "lorem ipsum dolor sit amet", 0));
 // }
