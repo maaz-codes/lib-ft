@@ -6,7 +6,7 @@
 /*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:47:36 by maakhan           #+#    #+#             */
-/*   Updated: 2024/07/02 14:24:07 by maakhan          ###   ########.fr       */
+/*   Updated: 2024/07/02 16:11:03 by maakhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char	*ft_get_word(const char *s, int start, int end)
 	return (word);
 }
 
-char	**get_array(const char *s, char c, size_t i, size_t j)
+char	**get_array(const char *s, char c, size_t i, int j)
 {
 	char	**ptr;
 	int		k;
