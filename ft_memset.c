@@ -1,28 +1,23 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/28 19:20:31 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:20:31 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memset(void *b, int c, size_t len)
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned char *ptr = b;
-    while (len--)
-        *ptr++ = c;
-    return (b);
-}
+	unsigned char	*ptr;
 
-// int main(void)
-// {
-//     char ptr[5];
-//     memset(ptr, 'A', sizeof(ptr));
-//     int i = 0;
-//     while (i < 5)
-//         printf("%c, ", ptr[i++]);
-//     printf("\n");
-    
-//     printf("Ft memset = ");
-//     char ptr2[5];
-//     ft_memset(ptr2, 'A', sizeof(ptr2));
-//     i = 0;
-//     while (i < 5)
-//         printf("%c, ", ptr2[i++]);
-//     printf("\n");
-// }
+	ptr = b;
+	while (len--)
+		*ptr++ = c;
+	return (b);
+}

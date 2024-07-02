@@ -1,15 +1,20 @@
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 19:36:12 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:21:36 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        c += 32;
-    return (c);
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }
-
-// int main(void)
-// {
-//     printf("character = %c\n", ft_tolower('A'));
-//     printf("character = %c\n", tolower('A'));
-// }

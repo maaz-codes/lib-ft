@@ -27,7 +27,7 @@ bonus: $(NAME) $(OBJC)
 	ar -r $(NAME) $(OBJC)
 
 %.o:%.c
-	$(CC) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS)
@@ -37,3 +37,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re bonus

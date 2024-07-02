@@ -1,37 +1,24 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 18:48:08 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:19:19 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *ptr = s;
-    while (n--)
-    {
-        *ptr++ = 0;
-    }
+	unsigned char	*ptr;
+
+	ptr = s;
+	while (n--)
+	{
+		*ptr++ = 0;
+	}
 }
-
-// int main(void)
-// {
-//     int s1[6];
-
-//     ft_bzero(s1, sizeof(s1));
-//     int i = 0;
-//     printf("FT =        ");
-//     while (i < 6)
-//     {
-//         printf("%d ", s1[i]);
-//         i++;
-//     }
-//     printf("\n");
-//     ///////////////////////////////////
-//     int s2[6];
-//     bzero(s2, sizeof(s2));
-//     i = 0;
-//     printf("Original =  ");
-//     while (i < 6)
-//     {
-//         printf("%d ", s1[i]);
-//         i++;
-//     }
-//     printf("\n");
-// }

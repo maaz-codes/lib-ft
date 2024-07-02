@@ -1,16 +1,20 @@
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 18:49:44 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:19:37 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
-
-// int main(void)
-// {
-//     printf("anwer = %d \n", ft_isascii('3'));
-//     printf("anwer = %d \n", isascii('3'));
-
-// }

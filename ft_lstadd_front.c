@@ -1,31 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 19:13:51 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:19:52 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (!lst || !new)
-        return ;
-    new->next = *lst;
-    *lst = new;
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
-
-// int main(void)
-// {
-//     t_list *lst;
-//     t_list *ptr;
-
-//     lst = ft_lstnew(strdup("Node 1"));
-
-//     ptr = ft_lstnew(strdup("Node 0"));
-
-//     // printing before adding new node
-//     ft_lstprint(lst);
-
-//     // Adding the node to front
-//     ft_lstadd_front(&lst, ptr);
-
-//     // printing after adding new node
-//     ft_lstprint(lst);
-// }

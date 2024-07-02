@@ -1,27 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 19:34:56 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:21:06 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-
-// static void ft_upper_case(unsigned int i, char *c)
-// {
-//     if (*c >= 'a' && *c <= 'z')
-//         *c -= 32;
-// }
-
-// int main(void)
-// {
-//     char s[100] = "Hello world!";
-//     ft_striteri(s, ft_upper_case);
-//     printf("New string = %s\n", s);
-// }

@@ -1,15 +1,20 @@
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 19:36:18 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:21:39 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        c -= 32;
-    return (c);
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }
-
-// int main(void)
-// {
-//     printf("character = %c\n", ft_toupper('a'));
-//     printf("character = %c\n", toupper('a'));
-// }

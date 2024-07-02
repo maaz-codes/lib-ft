@@ -1,17 +1,23 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maakhan <maakhan@student.42.ae>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 19:35:16 by maakhan           #+#    #+#             */
+/*   Updated: 2024/07/02 14:21:16 by maakhan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-    size_t len = 0;
-    while (str[len] != '\0')
-        len++;
-    return (len);
-}
+	size_t	len;
 
-// int main(void)
-// {
-//     printf("mine = %lu \n", ft_strlen("1234567"));
-//     printf("original = %lu\n", strlen("1234567"));
-// }
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
+}
